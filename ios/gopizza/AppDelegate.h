@@ -7,3 +7,4 @@
 @interface AppDelegate : EXAppDelegateWrapper <RCTBridgeDelegate>
 
 @end
+
