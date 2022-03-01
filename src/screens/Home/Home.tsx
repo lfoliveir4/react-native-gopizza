@@ -1,18 +1,20 @@
-import React, {ReactElement, useEffect, useState, useCallback} from 'react';
-import {MaterialIcons} from '@expo/vector-icons'
-import {Platform, TouchableOpacity, FlatList, Alert} from 'react-native'
-import {BorderlessButton} from 'react-native-gesture-handler'
-import {useTheme} from 'styled-components/native'
-import firestore from "@react-native-firebase/firestore";
+import React, { ReactElement, useState, useCallback } from 'react';
+import { FlatList } from 'react-native'
+import { MaterialIcons } from '@expo/vector-icons'
+import { BorderlessButton } from 'react-native-gesture-handler'
+import { useTheme } from 'styled-components/native'
 import { useNavigation, useFocusEffect } from '@react-navigation/native'
+import firestore from "@react-native-firebase/firestore";
 
 import happyEmoji from '@assets/happy.png'
 
 import SearchComponent from '@components/Search'
 import ProductCard from '@components/ProductCard'
 
-import {ProductProps} from "@components/ProductCard/ProductCard";
+import { ProductProps } from "@components/ProductCard/ProductCard";
 
+import { getStorageErrorMessageFromErrorCode } from "@helpers/errorsFirebaseStorage";
+import { useAuth } from '@hooks/auth';
 
 import {
   Container,
@@ -25,8 +27,6 @@ import {
   MenuHeaderTitle,
   NewProductButton
 } from './styles'
-import {getStorageErrorMessageFromErrorCode} from "@helpers/errorsFirebaseStorage";
-import { useAuth } from '@hooks/auth';
 
 
 export default function Home(): ReactElement {

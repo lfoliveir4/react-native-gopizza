@@ -1,16 +1,18 @@
-import React, {ReactElement, useEffect, useState} from 'react';
-import {Platform, TouchableOpacity, ScrollView, Alert, View} from 'react-native'
+import React, { ReactElement, useEffect, useState } from 'react';
+import { Platform, TouchableOpacity, ScrollView, Alert, View } from 'react-native'
 import * as ImagePicker from 'expo-image-picker'
 import firestore from "@react-native-firebase/firestore";
 import storage from '@react-native-firebase/storage'
-import {useRoute, useNavigation} from '@react-navigation/native'
-import {ProductNavigationProps} from '../../@types/navigation'
+import { useRoute, useNavigation } from '@react-navigation/native'
+import { ProductNavigationProps } from '../../@types/navigation'
 
 import ButtonBack from '@components/ButtonBack'
 import Photo from '@components/Photo'
 import InputPrice from '@components/InputPrice'
 import Input from '@components/Input'
 import Button from '@components/Button'
+
+import {ProductProps} from "@components/ProductCard/ProductCard";
 
 import {
   Container,
@@ -25,7 +27,6 @@ import {
   MaxCaracters,
   Form
 } from './styles'
-import {ProductProps} from "@components/ProductCard/ProductCard";
 
 type PizzaResponse = ProductProps & {
   photo_path: string

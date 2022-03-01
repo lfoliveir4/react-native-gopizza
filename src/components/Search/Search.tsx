@@ -10,7 +10,6 @@ import {
   Input,
   SearchButton,
   InputArea
-
 } from './styles'
 
 type Props = TextInputProps & {

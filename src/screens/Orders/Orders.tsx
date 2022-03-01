@@ -1,25 +1,18 @@
-import React, {ReactElement, useEffect, useState, useCallback} from 'react';
-import {Platform, ScrollView, FlatList, Alert} from 'react-native'
+import React, { ReactElement, useEffect, useState } from 'react';
+import { FlatList, Alert } from 'react-native'
 import firestore from '@react-native-firebase/firestore'
 
-import ButtonBack from "@components/ButtonBack";
-import ButtonRadio from "@components/ButtonRadio";
-import Input from "@components/Input";
-import Button from "@components/Button";
+import OrdersCard from "@components/OrdersCard";
+import Divider from "@components/Divider";
+import { OrderProps } from '@components/OrdersCard/OrdersCard';
 
-import {PIZZA_TYPES} from "@utils/pizzaTypes";
-
-
+import { useAuth } from '@hooks/auth';
 
 import {
   Container,
   Header,
   Title
 } from './styles'
-import OrdersCard from "@components/OrdersCard";
-import Divider from "@components/Divider";
-import { useAuth } from '@hooks/auth';
-import { OrderProps } from '@components/OrdersCard/OrdersCard';
 
 export default function Orders(): ReactElement {
   const [orders, setOrders] = useState<OrderProps[]>([])
