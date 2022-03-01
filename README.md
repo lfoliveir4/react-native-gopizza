@@ -1,5 +1,6 @@
 # react-native-gopizza
 
+App that creates pizza orders with firebase
 
 ## iOS
 
