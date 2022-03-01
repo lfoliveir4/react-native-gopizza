@@ -1,5 +1,5 @@
-import React, {ReactElement, useEffect, useState, useCallback} from 'react';
-import {Alert, Platform, ScrollView} from 'react-native'
+import React, { ReactElement, useEffect, useState } from 'react';
+import { Alert, Platform } from 'react-native'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import firestore from '@react-native-firebase/firestore'
 
@@ -8,7 +8,12 @@ import ButtonRadio from "@components/ButtonRadio";
 import Input from "@components/Input";
 import Button from "@components/Button";
 
-import {PIZZA_TYPES} from "@utils/pizzaTypes";
+import { PIZZA_TYPES } from "@utils/pizzaTypes";
+
+import { OrderNavigationProps } from '../../@types/navigation';
+import { ProductProps } from '@components/ProductCard';
+import { useAuth } from '@hooks/auth';
+import { getStorageErrorMessageFromErrorCode } from '@helpers/errorsFirebaseStorage';
 
 import {
   Container,
@@ -23,10 +28,6 @@ import {
   Price,
   FormRow
 } from './styles'
-import { OrderNavigationProps } from '../../@types/navigation';
-import { ProductProps } from '@components/ProductCard';
-import { useAuth } from '@hooks/auth';
-import { getStorageErrorMessageFromErrorCode } from '@helpers/errorsFirebaseStorage';
 
 
 type PizzaResponse = ProductProps & {

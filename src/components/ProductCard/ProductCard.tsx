@@ -1,7 +1,7 @@
-import React, {ReactElement} from 'react';
-import {RectButtonProps} from 'react-native-gesture-handler'
-import {useTheme} from 'styled-components/native'
-import {Feather} from '@expo/vector-icons'
+import React, { ReactElement } from 'react';
+import { RectButtonProps } from 'react-native-gesture-handler'
+import { useTheme } from 'styled-components/native'
+import { Feather } from '@expo/vector-icons'
 
 import {
   Container,
@@ -27,7 +27,7 @@ type Props = RectButtonProps & {
 
 
 export default function ProductCard({data, ...rest}: Props): ReactElement {
-  const {COLORS} = useTheme()
+  const { COLORS } = useTheme()
 
   return (
     <Container>

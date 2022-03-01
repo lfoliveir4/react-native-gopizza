@@ -1,26 +1,21 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import AppLoading from 'expo-app-loading'
-import {StatusBar} from 'expo-status-bar'
-import {useFonts, DMSans_400Regular} from '@expo-google-fonts/dm-sans'
-import {DMSerifDisplay_400Regular} from '@expo-google-fonts/dm-serif-display'
-import {ThemeProvider} from 'styled-components/native'
-import {NavigationContainer} from '@react-navigation/native'
-import theme from './src/theme'
+import { StatusBar } from 'expo-status-bar'
+import { useFonts, DMSans_400Regular } from '@expo-google-fonts/dm-sans'
+import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display'
+import { ThemeProvider } from 'styled-components/native'
 
-import {AuthProvider} from "@hooks/auth";
-import UserStackRoutes from "@routes/user.stack.routes";
-import UserTabRoutes from "@routes/user.tab.routes";
-import Orders from '@screens/Orders'
+import { AuthProvider } from "@hooks/auth";
 
 import Routes from './src/routes'
 
+import theme from './src/theme'
 
-export default function App() {
+export default function App(): ReactElement {
   const [fontsLoaded] = useFonts({
     DMSans_400Regular,
     DMSerifDisplay_400Regular
   })
-
 
   if (!fontsLoaded) {
     return <AppLoading/>

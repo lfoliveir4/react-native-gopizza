@@ -1,9 +1,12 @@
-import React, {ReactElement, useState} from 'react';
-import {KeyboardAvoidingView, Platform} from 'react-native'
+import React, { ReactElement, useState } from 'react';
+import { KeyboardAvoidingView, Platform } from 'react-native'
+
 import Input from '@components/Input'
 import Button from '@components/Button'
 
 import { useAuth } from '@hooks/auth'
+
+import brandImg from '@assets/brand.png'
 
 import {
   Container,
@@ -14,9 +17,6 @@ import {
   ForgotPasswordLabel
 } from './styles'
 
-import brandImg from '@assets/brand.png'
-
-
 export default function SignIn(): ReactElement {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -24,7 +24,6 @@ export default function SignIn(): ReactElement {
   const {
     signIn,
     isLogging,
-    signOut,
     forgotPassword
   } = useAuth()
 

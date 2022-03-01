@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/native'
 import { TextInput } from 'react-native'
-import {RectButton} from "react-native-gesture-handler";
+import { RectButton } from "react-native-gesture-handler";
 
 export const Container = styled.View`
   width: 100%;
