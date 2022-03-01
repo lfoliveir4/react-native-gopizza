@@ -8,4 +8,4 @@ App that creates pizza orders with firebase
 
 ## Android
 
-<img width="443" width="443" alt="image" src="https://user-images.githubusercontent.com/32423942/156090706-03b737d9-14f5-4336-b5d5-53d3455282c9.png">
+<img width="343" alt="image" src="https://user-images.githubusercontent.com/32423942/156090706-03b737d9-14f5-4336-b5d5-53d3455282c9.png">
